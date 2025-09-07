@@ -1,0 +1,1 @@
+#Crea una función que reciba nombre y edad, y devuelva un saludo con ambas.
