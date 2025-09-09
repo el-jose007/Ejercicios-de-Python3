@@ -30,8 +30,8 @@ while True:
     try:
         print("Ingrese su edad: ")
         edad = input("--> ")
-        if edad.isdigit(): # <-------------------------------------- Linea para corregir
-            if 1 > int(edad) >= 121:
+        if edad.isdigit(): 
+            if int(edad)< 1 or int(edad) > 120:
                 print("Error. imposible tener esa edad")
             else:
                 break
@@ -46,7 +46,7 @@ while True:
         correo = input("--> ")
 
         #Verificamos Si tiene @
-        if "@" and ".com" in correo:
+        if "@" in correo and ".com" in correo: #Este no lo sabia, jeje
             break
         else:
             print("Error. formato de mail incorrecto")

@@ -8,33 +8,45 @@ Pide una contraseña y verifica si es "segura":
     Tiene al menos un número
     No tiene espacios
      '''
-#Variables para usar de llave
-canti_caracteres = False
-minus = False
-mayus = False
-numero = False
-
 
 while True:
+    #Variables para usar de llave
+    minus = False
+    mayus = False
+    numero = False
+    espacios = False
+
+    #ingresar el dato
     print("Ingresa tu contraseña: ")
-    passw = input("--> ").split() # limpio de espacios
+    passw = input("--> ")
+
     # recorrer la cadena y verificar
-    if len(canti_caracteres) >=8:
+    if len(passw) >=8:
         for caracter in passw:
-            if caracter.islower():
+            if caracter == " ":
+                 espacios = True
+            elif caracter.islower():
                 minus = True
             elif caracter.isupper():
-                mayus = True
+                    mayus = True
             elif caracter.isdigit():
-                numero = True
+                    numero = True
+            
+        #VERIFICACION FINAL y conteo de errores.
+        
+        if minus and mayus and numero and not espacios:
+            print("<<<<<<  \u2705CLAVE ACEPTADA   >>>>>>")
+            break
         else:
             print("No cumple con los siguientes parametros")
-            if minus == False:
+            if not minus:
                 print("Falta Minusculas")
-            if mayus == False:
+            if not mayus:
                 print("Falta Mayusculas")
-            if numero == False:
+            if not numero:
                 print("Falta un numero")
+            if espacios: #se evalua como True. interesante!
+                print("Contiene un espacio")
     else:
         print("Contraseña incorrecta. Debe tener 8 caracteres o mas.")
 
