@@ -1,19 +1,17 @@
-# crear un programa que salude de la manera adecuada segun la hora 
-#que es. 
 
-from datetime import datetime
+#Contador de palabras en una frase
 
-def saludar(hs):
-    if 20<= hs < 24 or 0 <= hs <6:
-        return "buenas noches"
-    elif 6 <= hs < 12:
-        return "buenos dias"
-    elif 12<= hs < 20:
-        return "buenas tardes"
-               
-#la hora actual
-hora = datetime.now().hour
+def descomponer(frase):
+    conversion = frase.split()
+    return conversion
 
-print(saludar(hora))
-print("Son las ", hora)
+
+
+#ingresar frase:
+frase = input("ingresar una frase: ")
+
+palabras = descomponer(frase)
+for c in palabras:
+    print (c)
+
 
