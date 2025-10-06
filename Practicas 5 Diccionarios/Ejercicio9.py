@@ -107,7 +107,7 @@ def prestamos():
         #Hacemos la busqueda y en caso de encontrar lo agregamos a la lista
         for libros in biblioteca:
             if termino in libros['titulo'].lower() or termino in libros['autor'].lower():
-                libros_encontrados.append(libros)
+                libros_encontrados.append(libro)
 
         #Si no encontro nada:
         if not libros_encontrados():
