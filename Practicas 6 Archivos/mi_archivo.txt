@@ -1,0 +1,1 @@
+Hola, este archivo está en la misma carpeta que el código.
