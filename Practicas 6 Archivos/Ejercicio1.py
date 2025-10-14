@@ -10,3 +10,4 @@ ruta_archivo = os.path.join(directorio_actual, "mi_archivo.txt")
 # Escribe en esa ubicación
 with open(ruta_archivo, "w") as arch:
     arch.write("Hola, este archivo está en la misma carpeta que el código.")
+    
