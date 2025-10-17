@@ -23,3 +23,8 @@ with open(ruta_archivo, "w") as arch:
 
 print(f"✅ Archivo guardado en: {ruta_archivo}")
 ###############################################################################
+with open(ruta_archivo, 'r') as arch:
+    contenido = arch.readlines()
+    for num, linea in enumerate(contenido, 1):
+        print(f"{num} - {linea.rstrip()}")
+
