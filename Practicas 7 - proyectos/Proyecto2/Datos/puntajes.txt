@@ -1,2 +1,3 @@
+joaquín|6
 emanuel|7
 jose|4
